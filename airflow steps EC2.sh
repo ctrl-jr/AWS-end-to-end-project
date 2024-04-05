@@ -1,5 +1,5 @@
 #Steps for installing and running Airflow 2.8.4 on Ubuntu EC2 using Python 3.10
-#including viertual envronments and aws connectors and operators
+#including virtual envronment and aws connectors, perators
 sudo apt-get update
 sudo apt install python3-pip
 sudo apt install python3.10-venv
