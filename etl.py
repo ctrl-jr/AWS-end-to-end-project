@@ -1,30 +1,21 @@
 import requests
 import json
 import pandas as pd
-import configparser
-import os
-
-parser = configparser.ConfigParser()
-parser.read(os.path.join(os.path.dirname(__file__), 'config/config.conf'))
-
 
 url = "https://opencritic-api.p.rapidapi.com/game/hall-of-fame"
 
 headers = {
-	"X-RapidAPI-Key": parser.get('api_keys', 'rapidapi-key'),
-	"X-RapidAPI-Host": parser.get('api_keys', 'rapidapi-host')
-
+	"X-RapidAPI-Key": "c889eb29f6msh311cbe380da8e68p19e05bjsn1bd591b83fee",
+	"X-RapidAPI-Host": "opencritic-api.p.rapidapi.com"
 }
 
 response = requests.get(url, headers=headers)
-
-#print(response.json())
-top_games = json.loads(response.text)
-#print("print json_obj:")
-#print(json_obj)
+response_txt = json.loads(response.text)
+print(type(response_txt))
+#print(response_txt)
 game_list = []
 
-for entry in top_games: 
+for entry in response_txt: 
     temp_list = { 
     "game": entry["name"],
     "release-date": entry["firstReleaseDate"],
