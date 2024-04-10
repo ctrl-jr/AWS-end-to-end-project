@@ -15,10 +15,10 @@ print(type(response_txt))
 
 #testing with normalized json
 df2 = pd.json_normalize(response_txt)
-print('this is df2:')
-print(df2)
-df2.to_json('game-list.json', orient='records', indent=2)
-df2.to_csv('game-list.csv')
+#print('this is df2:')
+print(df2.columns)
+#df2.to_json('game-list.json', orient='records', indent=2)
+#df2.to_csv('game-list.csv')
 
 #print(response_txt)
 game_list = []
