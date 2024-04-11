@@ -11,37 +11,23 @@ headers = {
 
 response = requests.get(url, headers=headers)
 response_txt = json.loads(response.text)
-print(type(response_txt))
+#print(type(response_txt))
 
 #testing with normalized json
-df2 = pd.json_normalize(response_txt)
-#print('this is df2:')
-print(df2.columns)
-#df2.to_json('game-list.json', orient='records', indent=2)
-#df2.to_csv('game-list.csv')
+df1 = pd.json_normalize(response_txt)
 
-#print(response_txt)
-game_list = []
+#dropping columns we dont need
+df2 = df1.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
 
-# for entry in response_txt: 
-#     temp_list = { 
-#     "game": entry["name"],
-#     "release-date": entry["firstReleaseDate"],
-#     "score": entry["topCriticScore"] }
+#Removing time from date
+df2['releaseDate'] = pd.to_datetime(df2['firstReleaseDate']).dt.date
 
-#     game_list.append(temp_list) 
+df3 = df2.drop('firstReleaseDate', axis=1)
 
- 
-# df = pd.DataFrame(game_list)
+#Rearranging columns
+df3 = df3[['name', 'releaseDate', 'topCriticScore']]
+df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
 
-# #Removing time from date
-# df['date'] = pd.to_datetime(df['release-date']).dt.date
+df3.to_json('game-list.json', orient='records', indent=2)
+df3.to_csv('game-list.csv', index=False)
 
-# #Making a new df excluding old release date format
-# new_df = df[['game', 'date', 'score']]
-# new_df = new_df.sort_values(by=['score'], ascending=False)
-
-# #print(new_df)
-# #Creating a local CSV to view the list
-# new_df.to_csv("games.csv", index=False)
-# #print(new_df)
