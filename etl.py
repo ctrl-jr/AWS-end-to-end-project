@@ -25,7 +25,7 @@ df1['releaseDate'] = pd.to_datetime(df1['firstReleaseDate']).dt.date
 df3 = df1.drop('firstReleaseDate', axis=1)
 
 #rearranging columns
-#df3 = df3[['name', 'releaseDate', 'topCriticScore']]
+df3 = df3[['name', 'releaseDate', 'topCriticScore', 'tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm']]
 df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
 
 #exporting to JSON and CSV
