@@ -31,6 +31,18 @@ df3 = df1.drop('firstReleaseDate', axis=1)
 #	df3['comment'] = 'Epic'
 #elif 'topCriticScore' > 90 AND <95:
 #	df3['comment'] = 'Amazing'
+###This is the apply function method
+# def myfunc(score):
+#     if score > 95:
+#         myvalue = 'Dope!!!'
+#     elif score > 90  and < 95:
+#         myvalue = 'Sick'
+#     else:
+#         myvalue = 'It's ok'
+#     return myvalue
+
+# df['new_col'] = df.apply(myfunc, axis=1)
+
 
 #rearranging columns
 df3 = df3[['name', 'releaseDate', 'topCriticScore', 'tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm']]
