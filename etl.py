@@ -25,6 +25,7 @@ df1['releaseDate'] = pd.to_datetime(df1['firstReleaseDate']).dt.date
 df3 = df1.drop('firstReleaseDate', axis=1)
 
 #TODO-add new column that assigns a label given the score
+#Apparenty this should be done either with numpy or an apply + lambda
 #df3['comment'] = 
 #if 'topCriticScore' > 95:
 #	df3['comment'] = 'Epic'
