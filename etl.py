@@ -24,6 +24,13 @@ df1['releaseDate'] = pd.to_datetime(df1['firstReleaseDate']).dt.date
 
 df3 = df1.drop('firstReleaseDate', axis=1)
 
+#TODO-add new column that assigns a label given the score
+#df3['comment'] = 
+#if 'topCriticScore' > 95:
+#	df3['comment'] = 'Epic'
+#elif 'topCriticScore' > 90 AND <95:
+#	df3['comment'] = 'Amazing'
+
 #rearranging columns
 df3 = df3[['name', 'releaseDate', 'topCriticScore', 'tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm']]
 df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
