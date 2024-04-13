@@ -47,7 +47,8 @@ df3 = df1.drop('firstReleaseDate', axis=1)
 #rearranging columns
 df3 = df3[['name', 'releaseDate', 'topCriticScore', 'tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm']]
 df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
-
+df3 = df3.reset_index()
+df3.rename(columns={'Index': 'index'}, inplace=True)
 #exporting to JSON and CSV
 df3.to_json('game-list.json', orient='records', indent=2)
 df3.to_csv('game-list.csv', index=False)

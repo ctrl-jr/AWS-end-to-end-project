@@ -1,5 +1,6 @@
 [
   {
+    "index":0,
     "name":"Final Fantasy VII Rebirth",
     "releaseDate":1709164800000,
     "topCriticScore":93,
@@ -11,6 +12,7 @@
     "images.banner.sm":"game\/15136\/iTX8SNU3.jpg"
   },
   {
+    "index":1,
     "name":"Balatro",
     "releaseDate":1708387200000,
     "topCriticScore":92,
@@ -22,6 +24,7 @@
     "images.banner.sm":"game\/undefined\/uBbUmgTM.jpg"
   },
   {
+    "index":2,
     "name":"Tekken 8",
     "releaseDate":1706140800000,
     "topCriticScore":90,
@@ -33,6 +36,7 @@
     "images.banner.sm":"game\/15734\/4Sx3Oox2.jpg"
   },
   {
+    "index":3,
     "name":"Like A Dragon: Infinite Wealth",
     "releaseDate":1706227200000,
     "topCriticScore":90,
@@ -44,6 +48,7 @@
     "images.banner.sm":"game\/15906\/rFTQram7.jpg"
   },
   {
+    "index":4,
     "name":"Solium Infernum",
     "releaseDate":1708560000000,
     "topCriticScore":88,
@@ -55,6 +60,7 @@
     "images.banner.sm":"game\/16336\/93wiJh5B.jpg"
   },
   {
+    "index":5,
     "name":"Unicorn Overlord",
     "releaseDate":1709856000000,
     "topCriticScore":88,
@@ -66,6 +72,19 @@
     "images.banner.sm":"game\/16408\/cOFOXUyc.jpg"
   },
   {
+    "index":6,
+    "name":"Minishoot' Adventures",
+    "releaseDate":1712016000000,
+    "topCriticScore":88,
+    "tier":"Mighty",
+    "id":16527,
+    "images.box.og":"game\/16527\/o\/8H3qeUHP.jpg",
+    "images.box.sm":"game\/16527\/m0MXcKJ3.jpg",
+    "images.banner.og":"game\/16527\/o\/dxGULrH2.jpg",
+    "images.banner.sm":"game\/16527\/ni11Hyow.jpg"
+  },
+  {
+    "index":7,
     "name":"Persona 3 Reload",
     "releaseDate":1706832000000,
     "topCriticScore":88,
@@ -77,6 +96,7 @@
     "images.banner.sm":"game\/16094\/o9HarGcE.jpg"
   },
   {
+    "index":8,
     "name":"Dragon's Dogma 2",
     "releaseDate":1711065600000,
     "topCriticScore":87,
@@ -88,6 +108,7 @@
     "images.banner.sm":"game\/16051\/MnI6h5EA.jpg"
   },
   {
+    "index":9,
     "name":"Prince of Persia: The Lost Crown",
     "releaseDate":1705536000000,
     "topCriticScore":87,
@@ -99,17 +120,7 @@
     "images.banner.sm":"game\/15867\/sY7LJx31.jpg"
   },
   {
-    "name":"Minishoot' Adventures",
-    "releaseDate":1712016000000,
-    "topCriticScore":86,
-    "tier":"Mighty",
-    "id":16527,
-    "images.box.og":"game\/16527\/o\/8H3qeUHP.jpg",
-    "images.box.sm":"game\/16527\/m0MXcKJ3.jpg",
-    "images.banner.og":"game\/16527\/o\/dxGULrH2.jpg",
-    "images.banner.sm":"game\/16527\/ni11Hyow.jpg"
-  },
-  {
+    "index":10,
     "name":"Lil Guardsman",
     "releaseDate":1705968000000,
     "topCriticScore":84,
@@ -121,6 +132,7 @@
     "images.banner.sm":"game\/16104\/yXlA34LR.jpg"
   },
   {
+    "index":11,
     "name":"Anomaly Agent",
     "releaseDate":1706054400000,
     "topCriticScore":84,
