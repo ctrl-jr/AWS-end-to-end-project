@@ -3,17 +3,17 @@ import pandas as pd
 
 
 def lambda_handler(event, context):
-    # Get the object from the event and show its content type
-    #bucket = event['Records'][0]['s3']['bucket']['name']
-    #key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
     try:
 
         # Create df from the json file in our S3 bucket
         df_json = awr.s3.read_json('s3://jr-s3-001/game-list.json')
 
+        # Dropping columns we don't need
+        df1 = df_json.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
+
         # Convert JSON to parquet
         awr_response = awr.s3.to_parquet(
-            df=df_json,
+            df=df1,
             path='s3://jr-s3-clean-data/game-list.parquet',
             dataset=True,
             database='glue-db-0O1',
