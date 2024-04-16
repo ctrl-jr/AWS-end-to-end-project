@@ -20,10 +20,10 @@ print("JSON normalized")
 #removing time from date
 df1['releaseDate'] = pd.to_datetime(df1['firstReleaseDate']).dt.date
 
-df3 = df1.drop('firstReleaseDate', axis=1)
+df2 = df1.drop('firstReleaseDate', axis=1)
 
 # Dropping columns we don't need
-df3 = df3.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
+df2 = df2.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
 print("Dropped columns that won't be used")
 
 #TODO-add new column that assigns a label given the score
@@ -46,11 +46,20 @@ print("Dropped columns that won't be used")
 # df['new_col'] = df.apply(myfunc, axis=1)
 
 #rearranging columns
-df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
+df2.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
 
 #creating an index column and naming it 'index'
-df3 = df3.reset_index()
-df3.rename(columns={'Index': 'index'}, inplace=True)
+df2 = df2.reset_index()
+df2.rename(columns={'Index': 'index'}, inplace=True)
+
+
+#------this is broken------
+#read addtional info file (game-list-extra.json)
+df_extra = pd.read_json('game-list-extra.json', orient='records')
+
+#join with 'extra' file
+df3 = pd.merge(df_extra, df2, left_on='id', right_on='game_id')
+#----broken ends here-------
 
 try:
 #exporting to JSON and CSV
