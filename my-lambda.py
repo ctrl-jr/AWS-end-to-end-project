@@ -8,9 +8,7 @@ def lambda_handler(event, context):
         # Create df from the json file in our S3 bucket
         df_json = awr.s3.read_json('s3://jr-s3-001/game-list.json')
 
-        # Dropping columns we don't need
-        df1 = df_json.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
-
+       
         # Convert JSON to parquet
         awr_response = awr.s3.to_parquet(
             df=df1,

@@ -12,15 +12,19 @@ headers = {
 response = requests.get(url, headers=headers)
 response_txt = json.loads(response.text)
 #print(type(response_txt))
-response_txt.to_json
 
 #testing with normalized json
 df1 = pd.json_normalize(response_txt)
+print("JSON normalized")
 
 #removing time from date
 df1['releaseDate'] = pd.to_datetime(df1['firstReleaseDate']).dt.date
 
 df3 = df1.drop('firstReleaseDate', axis=1)
+
+# Dropping columns we don't need
+df3 = df3.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
+print("Dropped columns that won't be used")
 
 #TODO-add new column that assigns a label given the score
 #Apparenty this should be done either with numpy or an apply + lambda
@@ -48,7 +52,11 @@ df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
 df3 = df3.reset_index()
 df3.rename(columns={'Index': 'index'}, inplace=True)
 
+try:
 #exporting to JSON and CSV
-df3.to_json('game-list.json', orient='records', indent=2)
-df3.to_csv('game-list.csv', index=False)
-
+	df3.to_json('game-list.json', orient='records', indent=2)
+	df3.to_csv('game-list.csv', index=False)
+	print("JSON and CSV created!")
+except Exception as e:
+	print(e)
+	print("Something went wrong")
