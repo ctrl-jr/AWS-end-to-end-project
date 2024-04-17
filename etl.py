@@ -58,10 +58,13 @@ df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
 df3 = df3[['index', 'name', 'topCriticScore', 'tier', 'releaseDate', 'publisher', 'genre']]
 
 #exporting to JSON and CSV
-try:
-	df3.to_json('game-list.json', orient='records', indent=2)
-	df3.to_csv('game-list.csv', index=False)
-	print("::::JSON and CSV created!")
+df3.to_json('game-list.json', orient='records', indent=2)
+df3.to_csv('game-list.csv', index=False)
+print("::::JSON and CSV created!")
+
+#upload to S3-PENDING------
+try:	
+    df3.to_json('s3://jr-s3-001')
     
 except Exception as e:
 	print(e)
