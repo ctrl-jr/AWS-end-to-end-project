@@ -21,3 +21,4 @@ AmazonS3_node1713059984014 = glueContext.create_dynamic_frame.from_options(forma
 SelectFields_node1713060165795 = SelectFields.apply(frame=AmazonS3_node1713059984014, paths=["index", "name", "releasedate", "topcriticscore"], transformation_ctx="SelectFields_node1713060165795")
 
 job.commit()
+

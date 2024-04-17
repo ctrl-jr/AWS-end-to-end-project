@@ -1,74 +1,98 @@
 [
   {
-    "index":0,
+    "id":0,
     "name":"Final Fantasy VII Rebirth",
     "topCriticScore":93,
-    "releaseDate":1709164800000
+    "releaseDate":1709164800000,
+    "Publisher":"Square Enix",
+    "Genre":"RPG"
   },
   {
-    "index":1,
+    "id":1,
     "name":"Balatro",
-    "topCriticScore":92,
-    "releaseDate":1708387200000
+    "topCriticScore":91,
+    "releaseDate":1708387200000,
+    "Publisher":"Playstack",
+    "Genre":"Strategy"
   },
   {
-    "index":2,
+    "id":2,
     "name":"Tekken 8",
     "topCriticScore":90,
-    "releaseDate":1706140800000
+    "releaseDate":1706140800000,
+    "Publisher":"Bandai NAMCO",
+    "Genre":"Fighter"
   },
   {
-    "index":3,
+    "id":3,
     "name":"Like A Dragon: Infinite Wealth",
     "topCriticScore":90,
-    "releaseDate":1706227200000
+    "releaseDate":1706227200000,
+    "Publisher":"SEGA",
+    "Genre":"Action Adventure"
   },
   {
-    "index":4,
+    "id":4,
     "name":"Solium Infernum",
     "topCriticScore":88,
-    "releaseDate":1708560000000
+    "releaseDate":1708560000000,
+    "Publisher":"League of Geeks",
+    "Genre":"Strategy"
   },
   {
-    "index":5,
+    "id":5,
     "name":"Unicorn Overlord",
     "topCriticScore":88,
-    "releaseDate":1709856000000
+    "releaseDate":1709856000000,
+    "Publisher":"Atlus",
+    "Genre":"RPG"
   },
   {
-    "index":6,
-    "name":"Minishoot' Adventures",
-    "topCriticScore":88,
-    "releaseDate":1712016000000
-  },
-  {
-    "index":7,
+    "id":6,
     "name":"Persona 3 Reload",
     "topCriticScore":88,
-    "releaseDate":1706832000000
+    "releaseDate":1706832000000,
+    "Publisher":"IndieArk",
+    "Genre":"RPG"
   },
   {
-    "index":8,
+    "id":7,
     "name":"Dragon's Dogma 2",
     "topCriticScore":87,
-    "releaseDate":1711065600000
+    "releaseDate":1711065600000,
+    "Publisher":"Atlus",
+    "Genre":"RPG"
   },
   {
-    "index":9,
+    "id":8,
+    "name":"Minishoot' Adventures",
+    "topCriticScore":87,
+    "releaseDate":1712016000000,
+    "Publisher":"CAPCOM",
+    "Genre":"Action"
+  },
+  {
+    "id":9,
     "name":"Prince of Persia: The Lost Crown",
     "topCriticScore":87,
-    "releaseDate":1705536000000
+    "releaseDate":1705536000000,
+    "Publisher":"Ubisoft",
+    "Genre":"Platformer"
   },
   {
-    "index":10,
+    "id":10,
     "name":"Lil Guardsman",
     "topCriticScore":84,
-    "releaseDate":1705968000000
+    "releaseDate":1705968000000,
+    "Publisher":"Versus Evil",
+    "Genre":"Adventure"
   },
   {
-    "index":11,
+    "id":11,
     "name":"Anomaly Agent",
     "topCriticScore":84,
-    "releaseDate":1706054400000
+    "releaseDate":1706054400000,
+    "Publisher":"NAISU",
+    "Genre":"Platformer"
   }
 ]

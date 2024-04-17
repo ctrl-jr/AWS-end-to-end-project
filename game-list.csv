@@ -1,13 +1,13 @@
-index,name,topCriticScore,releaseDate
-0,Final Fantasy VII Rebirth,93,2024-02-29
-1,Balatro,92,2024-02-20
-2,Tekken 8,90,2024-01-25
-3,Like A Dragon: Infinite Wealth,90,2024-01-26
-4,Solium Infernum,88,2024-02-22
-5,Unicorn Overlord,88,2024-03-08
-6,Minishoot' Adventures,88,2024-04-02
-7,Persona 3 Reload,88,2024-02-02
-8,Dragon's Dogma 2,87,2024-03-22
-9,Prince of Persia: The Lost Crown,87,2024-01-18
-10,Lil Guardsman,84,2024-01-23
-11,Anomaly Agent,84,2024-01-24
+id,name,topCriticScore,releaseDate,Publisher,Genre
+0,Final Fantasy VII Rebirth,93,2024-02-29,Square Enix,RPG
+1,Balatro,91,2024-02-20,Playstack,Strategy
+2,Tekken 8,90,2024-01-25,Bandai NAMCO,Fighter
+3,Like A Dragon: Infinite Wealth,90,2024-01-26,SEGA,Action Adventure
+4,Solium Infernum,88,2024-02-22,League of Geeks,Strategy
+5,Unicorn Overlord,88,2024-03-08,Atlus,RPG
+6,Persona 3 Reload,88,2024-02-02,IndieArk,RPG
+7,Dragon's Dogma 2,87,2024-03-22,Atlus,RPG
+8,Minishoot' Adventures,87,2024-04-02,CAPCOM,Action
+9,Prince of Persia: The Lost Crown,87,2024-01-18,Ubisoft,Platformer
+10,Lil Guardsman,84,2024-01-23,Versus Evil,Adventure
+11,Anomaly Agent,84,2024-01-24,NAISU,Platformer
