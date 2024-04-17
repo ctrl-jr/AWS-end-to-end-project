@@ -2,6 +2,18 @@ import requests
 import json
 import pandas as pd
 
+# for adding a new column that assigns a label given the score
+def map_score(score):
+  if score >= 90:
+    return "Masterpiece"
+  elif score > 87:
+    return "Very Good"
+  else:
+    return "Solid"
+
+
+
+
 url = "https://opencritic-api.p.rapidapi.com/game/hall-of-fame"
 
 headers = {
@@ -22,31 +34,13 @@ df1['releaseDate'] = pd.to_datetime(df1['firstReleaseDate']).dt.date
 
 df2 = df1.drop('firstReleaseDate', axis=1)
 
-# Dropping columns we don't need
+#dropping columns we don't need
 df2 = df2.drop(columns=['tier', 'id', 'images.box.og', 'images.box.sm', 'images.banner.og', 'images.banner.sm'])
 print("**Dropped columns that won't be used")
 
-#TODO-add new column that assigns a label given the score
-#Apparenty this should be done either with numpy or an apply + lambda
-#df3['comment'] = 
-#if 'topCriticScore' > 95:
-#	df3['comment'] = 'Epic'
-#elif 'topCriticScore' > 90 AND <95:
-#	df3['comment'] = 'Amazing'
-###This is the apply function method
-# def myfunc(score):
-#     if score > 95:
-#         myvalue = 'Dope!!!'
-#     elif score > 90  and < 95:
-#         myvalue = 'Sick'
-#     else:
-#         myvalue = 'It's ok'
-#     return myvalue
+#creating new column that adds label based on score
+df2["tier"] = df2['topCriticScore'].apply(map_score)
 
-# df['new_col'] = df.apply(myfunc, axis=1)
-
-#rearranging columns
-df2.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
 
 #creating an index column and naming it 'index'
 df2 = df2.reset_index()
@@ -54,11 +48,14 @@ df2.rename(columns={'Index': 'index'}, inplace=True)
 
 #read addtional info file (game-list-extra.json)
 df_extra = pd.read_json('game-list-extra.json')
-#join with 'extra' file
-df3 = df2.set_index('index').join(df_extra.set_index('game_index'))
 
-df3 = df3.reset_index()
-df3.rename(columns={'index': 'id'}, inplace=True)
+#join with 'extra' file and dropping column 'game_index'
+df3 = pd.concat([df2,df_extra], axis=1)  
+df3 = df3.drop(columns='game_index')
+
+#rearranging columns
+df3.sort_values(by=['topCriticScore'], inplace=True, ascending=False)
+df3 = df3[['index', 'name', 'topCriticScore', 'tier', 'releaseDate', 'publisher', 'genre']]
 
 try:
 #exporting to JSON and CSV

@@ -1,62 +1,62 @@
 [ 
   {
     "game_index":0,
-    "Publisher":"Square Enix",
-    "Genre":"RPG"
+    "publisher":"Square Enix",
+    "genre":"RPG"
   },
   {
     "game_index":1,
-    "Publisher":"Playstack",
-    "Genre":"Strategy"
+    "publisher":"Playstack",
+    "genre":"Strategy"
   },
   {
     "game_index":2,
-    "Publisher":"Bandai NAMCO",
-    "Genre":"Fighter"
+    "publisher":"Bandai NAMCO",
+    "genre":"Fighter"
   },
   {
     "game_index":3,
-    "Publisher":"SEGA",
-    "Genre":"Action Adventure"
+    "publisher":"SEGA",
+    "genre":"Action Adventure"
   },
   {
     "game_index":4,
-    "Publisher":"League of Geeks",
-    "Genre":"Strategy"
+    "publisher":"League of Geeks",
+    "genre":"Strategy"
   },
   {
     "game_index":5,
-    "Publisher":"Atlus",
-    "Genre":"RPG"
+    "publisher":"Atlus",
+    "genre":"RPG"
   },
   {
     "game_index":6,
-    "Publisher":"IndieArk",
-    "Genre":"RPG"
+    "publisher":"IndieArk",
+    "genre":"RPG"
   },
   {
     "game_index":7,
-    "Publisher":"Atlus",
-    "Genre":"RPG"
+    "publisher":"Atlus",
+    "genre":"RPG"
   },
   {
     "game_index":8,
-    "Publisher":"CAPCOM",
-    "Genre":"Action"
+    "publisher":"CAPCOM",
+    "genre":"Action"
   },
   {
     "game_index":9,
-    "Publisher":"Ubisoft",
-    "Genre":"Platformer"
+    "publisher":"Ubisoft",
+    "genre":"Platformer"
   },
   {
     "game_index":10,
-    "Publisher":"Versus Evil",
-    "Genre":"Adventure"
+    "publisher":"Versus Evil",
+    "genre":"Adventure"
   },
   {
     "game_index":11,
-    "Publisher":"NAISU",
-    "Genre":"Platformer"
+    "publisher":"NAISU",
+    "genre":"Platformer"
   }
 ]
