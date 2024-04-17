@@ -11,10 +11,10 @@ def lambda_handler(event, context):
        
         # Convert JSON to parquet
         awr_response = awr.s3.to_parquet(
-            df=df1,
+            df=df_json,
             path='s3://jr-s3-clean-data/game-list.parquet',
             dataset=True,
-            database='glue-db-0O1',
+            database='my-glue-db',
             table='jr_s3_001',
         )
 
