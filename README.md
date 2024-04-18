@@ -1,7 +1,8 @@
 # AWS End to End project
 
 ## Architecture
-![image](https://github.com/ctrl-jr/AWS-end-to-end-project/assets/36134747/aed9c0bd-7fcc-4279-9e16-ae79db621a5c)
+![image](https://github.com/ctrl-jr/AWS-end-to-end-project/assets/36134747/0fff7b70-1889-4684-976d-6d547d5d9b04)
+
 
 ## Overview
 This is a small project I did to get a better grasp in a few AWS services used in Data Engineering.
