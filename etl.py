@@ -17,7 +17,7 @@ def map_score(score):
 url = "https://opencritic-api.p.rapidapi.com/game/hall-of-fame"
 
 headers = {
-	"X-RapidAPI-Key": "c889eb29f6msh311cbe380da8e68p19e05bjsn1bd591b83fee",
+	"X-RapidAPI-Key": [api key],
 	"X-RapidAPI-Host": "opencritic-api.p.rapidapi.com"
 }
 
