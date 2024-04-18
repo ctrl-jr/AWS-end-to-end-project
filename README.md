@@ -11,7 +11,7 @@ Afterwards we upload the JSON to a **S3 bucket** that triggers a **Lambda functi
 
 ## Tools
 ### Dataset (API)
-- Zillow API
+- [Rapid API](https://rapidapi.com/opencritic-opencritic-default/api/opencritic-api)
 
 ### Language 
 - Python
