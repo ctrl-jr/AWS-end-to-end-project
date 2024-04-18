@@ -22,4 +22,4 @@ Afterwards we upload the JSON to a **S3 bucket** that triggers a **Lambda functi
 - **Lambda**: uses a trigger to detect when a file is uploaded to the first S3 bucket, then converts it into parquet format and sends it to the second S3 bucket.
 - **S3 Buckets**: for storing our JSON and Parquet files.
 - **Glue Crawler**: for discovering the metadata of the file in the S3 bucket which can be used to query the file.
-- **Serverles Redshit**: data warehouse which allows us to store our games list and query it using SQL.
+- **Redshit Serverless**: data warehouse which allows us to store our games list and query it using SQL.
