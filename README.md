@@ -1,7 +1,8 @@
 # AWS End to End project
 
 ## Architecture
-![image](https://github.com/ctrl-jr/AWS-end-to-end-project/assets/36134747/0fff7b70-1889-4684-976d-6d547d5d9b04)
+![image](https://github.com/ctrl-jr/AWS-end-to-end-project/assets/36134747/5d7f88d9-0cd9-4d88-8b21-d8a5ec9c2f18)
+
 
 
 ## Overview
