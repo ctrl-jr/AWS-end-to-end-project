@@ -8,7 +8,7 @@
 ## Overview
 This is a small project I did to get a better grasp in a few AWS services used in Data Engineering.
 
-We start by extracting the top games 11 from Open Critic using a **Zillow API** into a **pandas dataframe**, dropping unnecesary columns and adding a new column which adds a label based on the game score, then we join it with a JSON containing their genre and publisher.   
+We start by extracting the top games 12 from Open Critic using a **Zillow API** into a **pandas dataframe**, dropping unnecesary columns and adding a new column which adds a label based on the game score, then we join it with a JSON containing their genre and publisher.   
 Afterwards we upload the JSON to a **S3 bucket** that triggers a **Lambda function** to convert this JSON into Parquet and sends it to another **S3 bucket**, next we run a **Glue Crawler** to examine our file and produces a table with the data schema so we  make the appropriate changes (such as changing **releaseDate** to date format), then we create a  **Redshift** connection so we can finally load the data in a **Serverless Redshift Cluster** for analysis.
 
 ## Tools
